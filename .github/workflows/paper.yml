@@ -1,0 +1,40 @@
+name: Compile manuscript
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - main.tex
+      - .github/workflows/paper.yml
+
+permissions:
+  contents: write
+
+jobs:
+  paper:
+    if: github.repository == 'yspennstate/positive-cookie-ballisticity'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Check source
+        run: echo 'c2ad4e239eb8b2f1d81942686cf0879b68fb4580629897c457a7def5abf5be51  main.tex' | sha256sum --check
+      - name: Install TeX
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends latexmk texlive-latex-recommended texlive-fonts-recommended lmodern poppler-utils
+      - name: Compile paper
+        run: |
+          latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+          cp main.pdf paper.pdf
+          test "$(pdfinfo paper.pdf | awk '/^Pages:/ {print $2}')" = 9
+          if grep -E 'There were undefined references|Citation .* undefined|Reference .* undefined' main.log; then exit 1; fi
+          sha256sum README.md main.tex paper.pdf > SHA256SUMS.txt
+      - name: Save PDF
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add paper.pdf SHA256SUMS.txt
+          git commit -m 'Add PDF'
+          git push origin HEAD:main

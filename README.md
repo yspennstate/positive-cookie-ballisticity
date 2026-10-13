@@ -1,3 +1,35 @@
-# Ballisticity for One-Dimensional Positive Cookie Environments Without Bounded Stacks
+# Ballisticity for positive excited random walks without bounded cookie stacks
 
-Paper on the speed of excited random walks on the integers in i.i.d. cookie environments in which every cookie has a nonnegative drift to the right, while the cookie stacks need not be bounded. For bounded stacks the walk has positive speed if and only if the expected total drift $\delta$ of a stack exceeds 2. Kosygina and Zerner asked whether the boundedness assumption can be replaced by the positivity of all cookies (Problem 5.3 in E. Kosygina and M. P. W. Zerner, *Excited random walks: results, methods, open problems*, Bull. Inst. Math. Acad. Sin. (N.S.) 8 (2013), 105–157, [arXiv:1204.1895](https://arxiv.org/abs/1204.1895)).
+Yitzchak Shmalo — 13 October 2026
+
+[Paper (PDF)](paper.pdf) · [LaTeX source](main.tex)
+
+This paper proves the zero-speed/positive-speed criterion at expected total
+drift two for a one-dimensional nearest-neighbour excited random walk in an
+IID positive cookie environment satisfying weak ellipticity. It permits
+arbitrary dependence within a stack and infinitely many non-neutral cookies
+at a site. The critical case is proved by a branching-chain comparison and
+a direct downcrossing argument.
+
+Repository: https://github.com/yspennstate/positive-cookie-ballisticity
+
+## Files
+
+- `paper.pdf`: the manuscript.
+- `main.tex`: the complete LaTeX source, including the bibliography.
+- `SHA256SUMS.txt`: checksums of the published files.
+
+## Build
+
+With a standard TeX Live installation and latexmk:
+
+```sh
+latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
+```
+
+This produces `main.pdf`; `paper.pdf` is the supplied compiled copy.
+The source uses the AMS article class, Latin Modern, microtype, amsmath,
+amssymb, amsthm, mathtools, geometry, and hyperref. No external bibliography
+file, figures, datasets, or custom style files are required.
+
+The manuscript contains the author's competing-interest and AI-use declarations.
