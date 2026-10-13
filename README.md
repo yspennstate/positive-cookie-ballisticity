@@ -1,0 +1,3 @@
+# Ballisticity for One-Dimensional Positive Cookie Environments Without Bounded Stacks
+
+Paper on the speed of excited random walks on the integers in i.i.d. cookie environments in which every cookie has a nonnegative drift to the right, while the cookie stacks need not be bounded. For bounded stacks the walk has positive speed if and only if the expected total drift $\delta$ of a stack exceeds 2. Kosygina and Zerner asked whether the boundedness assumption can be replaced by the positivity of all cookies (Problem 5.3 in E. Kosygina and M. P. W. Zerner, *Excited random walks: results, methods, open problems*, Bull. Inst. Math. Acad. Sin. (N.S.) 8 (2013), 105–157, [arXiv:1204.1895](https://arxiv.org/abs/1204.1895)).
