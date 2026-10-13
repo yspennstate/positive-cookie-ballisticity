@@ -32,4 +32,4 @@ The source uses the AMS article class, Latin Modern, microtype, amsmath,
 amssymb, amsthm, mathtools, geometry, and hyperref. No external bibliography
 file, figures, datasets, or custom style files are required.
 
-The manuscript contains the author's competing-interest and AI-use declarations.
+The manuscript contains the author's funding statement and competing-interest and AI-use declarations.
