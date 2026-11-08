@@ -28,6 +28,7 @@
 \subjclass[2020]{Primary 60K37; Secondary 60J80, 60J10, 60E15}
 \keywords{Excited random walk, cookie environment, ballisticity, branching process, emigration, convex order}
 
+\usepackage{xurl}
 \begin{document}
 \begin{abstract}
 We consider a nearest-neighbour excited random walk on the integers in an iid cookie environment. Every cookie has nonnegative drift, and the environment satisfies weak ellipticity. If $\delta$ is the expected total drift at one site, then the limiting speed is zero for $\delta\le2$ and strictly positive for $\delta>2$. No bound on the number or positions of the non-neutral cookies, and no decay assumption on the stack depth, is required. This answers Problem~5.3 of Kosygina and Zerner. The proof at $\delta=2$ represents each cookie as a mixture of a deterministic right step and a fair step, then moves the deterministic steps to the front of the stack. The resulting branching chain has arbitrary integrable mean-two emigration, with positive probability of no emigration. A convex-order comparison with a three-point emigration law shows that its stationary mean is infinite. For the three-point law, this follows from a generating-function identity. A direct downcrossing argument then gives zero speed.
@@ -469,6 +470,8 @@ Proposition~\ref{prop:critical} gives $v^+=0$. Monotonicity and the nonnegativit
 \section*{Acknowledgements and funding}
 The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25). Computational resources were provided in part by Google Cloud through its education credits program (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
 
@@ -478,6 +481,8 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The manuscript and LaTeX source are available at\par
 \noindent\url{https://github.com/yspennstate/positive-cookie-ballisticity}.
+
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 
 \begin{thebibliography}{9}
 
@@ -528,6 +533,12 @@ M. P. W. Zerner,
 \emph{Multi-excited random walks on integers},
 Probability Theory and Related Fields \textbf{133} (2005), 98--122.
 \href{https://doi.org/10.1007/s00440-004-0417-0}{doi:10.1007/s00440-004-0417-0}.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 \end{document}
