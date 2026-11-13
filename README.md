@@ -1,6 +1,6 @@
 # Ballisticity for positive excited random walks without bounded cookie stacks
 
-Yitzchak Shmalo — 13 October 2026
+Yitzchak Shmalo — 13 October 2026, revised 13 November 2026
 
 [Paper (PDF)](paper.pdf) · [LaTeX source](main.tex)
 
